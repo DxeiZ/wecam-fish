@@ -7,10 +7,15 @@ mv captured_files/new/*.png captured_files/old/ > dev\null 2>&1 || true
 trap 'printf "\n";stop' 2
 
 banner() {
-    printf '              /\  \e[1;92mwecam-fish\e[0m      ______,....----,\n'
-    printf "/VVVVVVVVVVVVVV|===================""""""""""""       ___,..-\n"
-    printf '\`^^^^^^^^^^^^^^\|======================----------""""""\n'
-    printf '              \/\n'
+    printf "          /\              /\  \n"
+    printf "         /  \____________/  \ \n"
+    printf "         \                  / \n"
+    printf "             {o}     {o}      \n"
+    printf "                 [|]          \n"
+    printf "              \_______/       \n"
+    printf "               v     v        \n"
+    printf "                ^___^         \n"
+    printf "\e[1;92m   Wecam Fish      \e[0m\n"
     printf "\n"
 }
 
